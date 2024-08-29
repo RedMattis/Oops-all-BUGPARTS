@@ -201,6 +201,7 @@
         <texPath>Things/Pawn/Humanlike/BodyAttachments/BP_Raptoriales/BP_Pincers</texPath>
         <drawSize>(0.85,0.85)</drawSize>
         <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
           <dataNorth>
