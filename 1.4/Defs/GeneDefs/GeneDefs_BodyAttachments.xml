@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef Name="GeneTailBase" Abstract="True">
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <randomChosen>true</randomChosen>
+        <displayCategory>Bug_BodyAttachment</displayCategory>
+        <displayOrderInCategory>50</displayOrderInCategory>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <graphicData>
+            <drawLoc>Tailbone</drawLoc>
+            <drawScale>1.33</drawScale>
+            <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
+            <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+            <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+        </graphicData>
+        <exclusionTags>
+            <li>Bug_BodyAttachment</li>
+            <li>Tail</li>
+			<li>taur</li>
+			<li>spiderlegs</li>
+        </exclusionTags>
+	</GeneDef>
+	
+
+  <!-- Tails -->
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Caterpillar</defName>
+    <label>Caterpillar Tail</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a large Catterpillar tail.</description>
+    <iconPath>Genes/Icons/Gene_Caterpillarab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Wormies/Caterpillar</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+</GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Mantid</defName>
+    <label>Insectoid Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_Insectoidab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderAbdomen/MantAbdomen</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Ant</defName>
+    <label>Ant Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/BugParts_MantidAbIcon</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/AntAbdomen/AntAb</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Beebut</defName>
+    <label>Bee Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_beeab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/BeeAbdomen/Beetail</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Mantis</defName>
+    <label>Mantis Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/BugParts_MantidAbIcon</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Abdomen/Abdomen</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Earwigy</defName>
+    <label>Earwig Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_Earwigab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/EarwigAbdomen/Earwigs</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+  
+    <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_wasp</defName>
+    <label>Wasp Abdomen</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_waspab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<selectionWeight>0</selectionWeight>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/HornetAbdomen/Hornettail1</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+
+  </GeneDef>
+  
+      <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_honeypot</defName>
+    <label>Insectoid honeypot</label>
+	<displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow. Large, clumbersome and filled with jelly, a perfect organ for many spawn to grow.</description>
+    <iconPath>Genes/Icons/Gene_honeypotab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+	<biostatMet>1</biostatMet>
+	<selectionWeight>0</selectionWeight>
+	    <statFactors>
+      <Fertility>2.0</Fertility>
+    </statFactors>
+		<statOffsets>
+	  <MoveSpeed>-0.2</MoveSpeed>
+    </statOffsets>
+    <graphicData>
+        <graphicPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderAbdomen/MantAbdomen2</graphicPath>
+        <colorType>Skin</colorType>
+	    <drawScale>1.5</drawScale>
+		<drawOffsetNorth>(0.0, 0.2, -0.0)</drawOffsetNorth>
+		<drawOffsetSouth>(-0.0, -0.1, -0.0)</drawOffsetSouth>
+		<drawOffsetEast>(-0.0, -0.1, -0.0)</drawOffsetEast>
+    </graphicData>
+ </GeneDef>
+ 
+  
+  	    <GeneDef ParentName="GeneTailBase">
+		<defName>BP_Spiderlegs</defName>
+		<label>SpiderTaur Legs</label>
+		<description>Carriers of this gene have a large spider legs instead of regular human legs.</description>
+		<iconPath>UI/Icons/Genes/BP_Raptoriales</iconPath>
+		<displayCategory>Bug_BodyAttachment</displayCategory>
+		<displayOrderInCategory>1001</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	<statOffsets>
+	  <MoveSpeed>0.2</MoveSpeed>
+    </statOffsets>
+		<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</graphicPath>
+			<colorType>Skin</colorType>
+			<drawScale>1.5</drawScale>
+			<drawOffsetNorth>(0, 1.0, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 2.0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0.19, 0)</drawOffsetEast>
+		</graphicData>
+				
+	</GeneDef>	
+
+ </Defs>

@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<Defs>
+  <GeneDef Name="BP_GeneAntennaBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>80</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Antennas</li>
+      <li>Antenna</li>
+      <li>Headbone</li>
+      <li>HeadChitin</li>
+    </exclusionTags>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneAntennaBase">
+    <defName>Mantis_Antennae</defName>
+    <label>mantis antennae</label>
+    <description>Carriers of this gene have two long antennae.</description>
+    <iconPath>UI/Icons/Genes/Gene_Antenna</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPaths>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/AntennaA</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/AntennaB</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/AntennaC</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/AntennaD</li>
+        </texPaths>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneAntennaBase">
+    <defName>Beetle_Antennae</defName>
+    <label>beetle antennae</label>
+    <description>Carriers of this gene have two long antennae. Perfect for beetles but large beetle horns ovveride this.</description>
+    <iconPath>UI/Icons/Genes/Gene_Antenna</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPaths>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/AntennaBeetle</li>
+        </texPaths>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_GeneAntennaBase">
+    <defName>Lunarmoth_Antennae</defName>
+    <label>moth antennae</label>
+    <description>Carriers of this gene have two long antennae. Perfect for beetles but large beetle horns ovveride this.</description>
+    <iconPath>UI/Icons/Genes/Gene_MothAntenna</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPaths>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/mothantennea</li>
+        </texPaths>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef Name="BP_GeneeyesBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>80</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Headeye</li>
+      <li>Headeyes</li>
+      <li>Horn</li>
+      <li>Horns</li>
+    </exclusionTags>
+  </GeneDef>
+  
+  <GeneDef ParentName="BP_GeneeyesBase">
+    <defName>Insectiod_Mantideyes</defName>
+    <label>Mantid eyes</label>
+    <description>Carriers of this gene have large, powerful, compound insectoid eyes along with a mantis face.</description>
+    <iconPath>Genes/Icons/BugParts_MantidEyesIcon</iconPath>
+    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <postFactor>1.2</postFactor>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Mantidhead_Average1</li>
+      <li>Mantidhead_Narrow1</li>
+      <li>Mantidhead_Narrow2</li>
+      <li>Mantidhead_Gaunt</li>
+      <li>Mantidhead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyes</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef>
+    <defName>BP_Motheyes</defName>
+    <label>Moth eyes</label>
+    <iconPath>UI/Icons/Genes/BP_Motheyes</iconPath>
+    <description>Carriers of this gene have two large eyes, that can almost see things before they happen.</description>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <exclusionTags>
+      <li>ShootingAccuracy</li>
+      <li>EyeColor</li>
+      <li>AG_Heads</li>
+      <li>Heads</li>
+      <li>Head</li>
+    </exclusionTags>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Mothhead_Average1</li>
+      <li>Mothhead_Narrow1</li>
+      <li>Mothhead_Gaunt</li>
+      <li>Mothhead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_BugEyes</texPath>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_BugEyes</texPath>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef>
+    <defName>BP_Spidereyes</defName>
+    <label>spider eyes</label>
+    <iconPath>UI/Icons/Genes/BP_Spidereyes</iconPath>
+    <description>Carriers of this gene have several eyes that help the carrier see better.</description>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <exclusionTags>
+      <li>ShootingAccuracy</li>
+      <li>EyeColor</li>
+      <li>AG_Heads</li>
+      <li>Heads</li>
+      <li>Head</li>
+    </exclusionTags>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Spiderhead_Average1</li>
+      <li>Spiderhead_Narrow1</li>
+      <li>Spiderhead_Gaunt</li>
+      <li>Spiderhead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_Spidereyes</texPath>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_Spidereyes</texPath>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef Name="BP_GenefloofBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>80</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Neckfluff</li>
+    </exclusionTags>
+  </GeneDef>
+  <GeneDef ParentName="BP_GenefloofBase">
+    <defName>Moth_floof</defName>
+    <label>Neck Fluff</label>
+    <description>Carriers of this gene have a floofy mane of neck fluff. Moth approved!</description>
+    <iconPath>UI/Icons/Genes/BugParts_Mothfluff</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <drawData>
+          <dataNorth>
+            <layer>25</layer>
+            <offset>(0.0, 0.0, 0.35)</offset>
+          </dataNorth>
+          <dataSouth>
+            <layer>25</layer>
+            <offset>(-0.0, 0.0, 0.35)</offset>
+          </dataSouth>
+          <dataEast>
+            <layer>25</layer>
+            <offset>(-0.0, 0.0, 0.35)</offset>
+          </dataEast>
+        </drawData>
+        <drawSize>1</drawSize>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef Name="BP_GeneHornsBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>80</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Horn</li>
+      <li>Horns</li>
+      <li>Headbone</li>
+    </exclusionTags>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneHornsBase">
+    <defName>Beetle_Horn1</defName>
+    <label>beetle horn 1</label>
+    <description>Carriers of this gene have beetle like horns potruding from their head.</description>
+    <iconPath>UI/Icons/Genes/BP_Bughorn1</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Bughorn/MantidHorn1</texPath>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneHornsBase">
+    <defName>Beetle_Horn2</defName>
+    <label>beetle horn 2</label>
+    <description>Carriers of this gene have beetle like horns potruding from their head.</description>
+    <iconPath>UI/Icons/Genes/BP_Bughorn2</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Bughorn/MantidHorn2</texPath>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneHornsBase">
+    <defName>Beetle_Horn3</defName>
+    <label>beetle horn 3</label>
+    <description>Carriers of this gene have beetle like horns potruding from their head.</description>
+    <iconPath>UI/Icons/Genes/BP_Bughorn3</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Bughorn/MantidHorn3</texPath>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneHornsBase">
+    <defName>Beetle_Horn4</defName>
+    <label>beetle horn 4</label>
+    <description>Carriers of this gene have beetle like horns potruding from their head.</description>
+    <iconPath>UI/Icons/Genes/BP_Bughorn2</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Bughorn/BeetleHorn1</texPath>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef Name="BP_GeneMandibleBase" Abstract="True">
+    <endogeneCategory>Headbone</endogeneCategory>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>80</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Mandible</li>
+      <li>Mouth</li>
+    </exclusionTags>
+  </GeneDef>
+  <GeneDef ParentName="BP_GeneMandibleBase">
+    <defName>Spider_Mandible</defName>
+    <label>spidermandible</label>
+    <description>Carriers of this gene have large mandibles complete hallow fangs to dispense poison. Unfortunately they're not the best for ripping through food.</description>
+    <iconPath>UI/Icons/Genes/BP_spidermand</iconPath>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <exclusionTags>
+      <li>AG_TeethStrength</li>
+    </exclusionTags>
+    <statFactors>
+      <EatingSpeed>0.7</EatingSpeed>
+    </statFactors>
+    <abilities>
+      <li>BP_Venom_Bite</li>
+    </abilities>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Mandibles/MandiblesSpider</texPath>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <drawData>
+          <defaultData>
+            <layer>52</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0.0, 0, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, 0, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, 0, -0.0)</offset>
+          </dataEast>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+</Defs>

@@ -1,0 +1,8 @@
+<Defs>
+  <OopsBug.GlobalSettings>
+    <defName>OopsBug_GlobalSettings</defName>
+    <backgroundPathEndogenes>UI/Icons/Genes/BP_Endogene</backgroundPathEndogenes>
+    <backgroundPathXenogenes>UI/Icons/Genes/BP_Xenogene</backgroundPathXenogenes>
+    <backgroundPathArchite>UI/Icons/Genes/BP_Archite</backgroundPathArchite>
+  </OopsBug.GlobalSettings>
+</Defs>

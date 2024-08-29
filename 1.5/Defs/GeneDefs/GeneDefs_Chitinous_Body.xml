@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<Defs>
+  <GeneDef>
+    <defName>Exoskin</defName>
+    <label>Exoskin</label>
+    <labelShortAdj>exoskin</labelShortAdj>
+    <description>Carriers of this gene have a chitionous bodyand head. This is ugly to all non-insects. Most carriers of this gene are vulnerable to the cold temperatures.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>3</biostatMet>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_insectoidhead</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Exoskin_Average1</li>
+      <li>Exoskin_Average2</li>
+      <li>Exoskin_Average3</li>
+      <li>Exoskin_Average4</li>
+      <li>Exoskin_Average5</li>
+      <li>Exoskin_Average1_Wide</li>
+      <li>Exoskin_Average2_Wide</li>
+      <li>Exoskin_Average3_Wide</li>
+      <li>Exoskin_Narrow1</li>
+      <li>Exoskin_Narrow2</li>
+      <li>Exoskin_Narrow3</li>
+      <li>Exoskin_Narrow4</li>
+      <li>Exoskin_Gaunt</li>
+      <li>Exoskin_HeavyJaw</li>
+    </forcedHeadTypes>
+    <fur>Chitinous_Body</fur>
+    <exclusionTags>
+      <li>Fur</li>
+      <li>Headeyes</li>
+      <li>Head</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+
+      <!--I'd suggest either skipping this or adding TemperatureMax as well.
+      Players can easily end up with a character that has no comfortable temperature range at all causing death by hypothermia or heatstroke.
+
+      <ComfyTemperatureMin>10</ComfyTemperatureMin> --> 
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>OopsBug.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+    <modExtensions>
+      <li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+        <disableFacialAnimations>true</disableFacialAnimations>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef>
+    <defName>Insectoid_body</defName>
+    <label>Insectoid body</label>
+    <labelShortAdj>Insectoid body</labelShortAdj>
+    <description>Carriers of this gene have a chitionous body. This is unsettling to all non-insects. Most carriers of this gene are vulnerable to the cold temperatures. Dosen't alter the head significantly.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Exoskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <fur>Chitinous_Body</fur>
+    <exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>OopsBug.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+</Defs>

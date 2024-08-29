@@ -1,0 +1,305 @@
+<?xml version="1.0" ?>
+<Defs>
+  <GeneDef Name="GeneTailBase" Abstract="True">
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <randomChosen>true</randomChosen>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <exclusionTags>
+      <li>Bug_BodyAttachment</li>
+      <li>Tail</li>
+      <li>taur</li>
+      <li>spiderlegs</li>
+    </exclusionTags>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Caterpillar</defName>
+    <label>Caterpillar Tail</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a large Catterpillar tail.</description>
+    <iconPath>Genes/Icons/Gene_Caterpillarab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Wormies/Caterpillar</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Mantid</defName>
+    <label>Insectoid Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_Insectoidab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderAbdomen/MantAbdomen</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Ant</defName>
+    <label>Ant Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/BugParts_MantidAbIcon</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/AntAbdomen/AntAb</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Beebut</defName>
+    <label>Bee Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_beeab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/BeeAbdomen/Beetail</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Mantis</defName>
+    <label>Mantis Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/BugParts_MantidAbIcon</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Abdomen/Abdomen</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_Earwigy</defName>
+    <label>Earwig Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_Earwigab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/EarwigAbdomen/Earwigs</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>OopsBug.PawnRenderNodeWorker_AttachmentBodyHalf</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.30)</offset>
+          </dataEast>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_wasp</defName>
+    <label>Wasp Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow.</description>
+    <iconPath>Genes/Icons/Gene_waspab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/HornetAbdomen/Hornettail1</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_honeypot</defName>
+    <label>Insectoid honeypot</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow. Large, clumbersome and filled with jelly, a perfect organ for many spawn to grow.</description>
+    <iconPath>Genes/Icons/Gene_honeypotab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <selectionWeight>0</selectionWeight>
+    <statFactors>
+      <Fertility>2.0</Fertility>
+    </statFactors>
+    <statOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </statOffsets>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderAbdomen/MantAbdomen2</texPath>
+        <drawSize>(1,1)</drawSize>
+        <colorType>Skin</colorType>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>BP_Spiderlegs</defName>
+    <label>SpiderTaur Legs</label>
+    <description>Carriers of this gene have a large spider legs instead of regular human legs.</description>
+    <iconPath>UI/Icons/Genes/BP_Raptoriales</iconPath>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <selectionWeight>0</selectionWeight>
+    <statOffsets>
+      <MoveSpeed>0.2</MoveSpeed>
+    </statOffsets>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+        <drawSize>(1.25,1.25)</drawSize>
+        <colorType>Skin</colorType>
+        <drawData>
+          <dataNorth>
+            <offset>(0, 1.0, 0)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 2.0, 0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(0, 0.19, 0)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+</Defs>

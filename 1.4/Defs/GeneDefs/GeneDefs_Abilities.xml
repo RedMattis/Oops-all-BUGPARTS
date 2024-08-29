@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<GeneDef Name="BP_WingBase" Abstract="True">
+		<displayCategory>Miscellaneous</displayCategory>
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
+		<graphicData>
+			<drawLoc>Tailbone</drawLoc>
+		</graphicData>
+		<randomChosen>true</randomChosen>
+	</GeneDef>
+
+<GeneDef ParentName="BP_WingBase">
+    <defName>BP_MantisWings</defName>
+    <label>Mantis Wings</label>
+    <description>Carriers have elytra with slightly useable wings.</description>
+    <iconPath>UI/Icons/Genes/Gene_MantisWings</iconPath>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <descriptionHyperlinks>
+      <AbilityDef>BP_WingPoweredJump</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>jumper</symbol></li>
+        <li><symbol>leaper</symbol></li>
+        <li><symbol>bouncer</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>jump</symbol></li>
+        <li><symbol>leap</symbol></li>
+        <li><symbol>vault</symbol></li>
+        <li><symbol>long</symbol></li>
+        <li><symbol>fly</symbol></li>
+        <li><symbol>hop</symbol></li>
+		<li><symbol>wing</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+	<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/MantisWings/MantisWings</graphicPath>
+			<drawScale>1</drawScale>
+			<colorType>Skin</colorType>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+		    <abilities>
+      <li>BP_WingPoweredJump</li>
+    </abilities>
+  </GeneDef>
+  
+  <GeneDef ParentName="BP_WingBase">
+    <defName>BP_BeetleWings</defName>
+    <label>Beetle Wings</label>
+    <description>Carriers have a hard shell of elytra with slightly useable wings. Faily heavy and slows down the user.</description>
+    <iconPath>UI/Icons/Genes/Gene_BeetleWings</iconPath>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+	    <conditionalStatAffecters>
+      <li Class="ConditionalStatAffecter_Clothed">
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li Class="ConditionalStatAffecter_Unclothed">
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+    </conditionalStatAffecters>
+    <descriptionHyperlinks>
+      <AbilityDef>BP_WingPoweredJump</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>jumper</symbol></li>
+        <li><symbol>leaper</symbol></li>
+        <li><symbol>bouncer</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>jump</symbol></li>
+        <li><symbol>leap</symbol></li>
+        <li><symbol>vault</symbol></li>
+        <li><symbol>long</symbol></li>
+        <li><symbol>fly</symbol></li>
+        <li><symbol>hop</symbol></li>
+		<li><symbol>wing</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+	<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/BeetleWings/BeetleWings</graphicPath>
+			<drawScale>1</drawScale>
+			<colorType>Skin</colorType>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+		    <abilities>
+      <li>BP_WingPoweredJump</li>
+    </abilities>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_WingBase">
+    <defName>BP_lunarmothwings</defName>
+    <label>lunar moth wings</label>
+    <description>Carriers have delicate chitinous wings of fantastical colors.</description>
+    <iconPath>UI/Icons/Genes/Gene_LunarWings</iconPath>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+	    <conditionalStatAffecters>
+      <li Class="ConditionalStatAffecter_Clothed">
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li Class="ConditionalStatAffecter_Unclothed">
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+    </conditionalStatAffecters>
+    <descriptionHyperlinks>
+      <AbilityDef>BP_WingPoweredJump</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>jumper</symbol></li>
+        <li><symbol>leaper</symbol></li>
+        <li><symbol>bouncer</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>jump</symbol></li>
+        <li><symbol>leap</symbol></li>
+        <li><symbol>vault</symbol></li>
+        <li><symbol>long</symbol></li>
+        <li><symbol>fly</symbol></li>
+        <li><symbol>hop</symbol></li>
+		<li><symbol>wing</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+	<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/BodyAttachments/MothWingsAlt/BP_MothWings</graphicPath>
+			<drawScale>2</drawScale>
+			<drawOffsetNorth>(0, 0.19, 0)</drawOffsetNorth>
+			<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+			<drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+		</graphicData>
+		    <abilities>
+      <li>BP_WingPoweredJump</li>
+    </abilities>
+  </GeneDef>
+
+
+</Defs>

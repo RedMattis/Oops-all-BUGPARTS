@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneCategoryDef>
+    <defName>Bug_HeadAttachment</defName>
+    <label>Bug Head Attachments</label>
+    <displayPriorityInXenotype>534</displayPriorityInXenotype>
+	<displayPriorityInGenepack>-102</displayPriorityInGenepack>
+  </GeneCategoryDef>
+  
+    <GeneCategoryDef>
+    <defName>Bug_BodyAttachment</defName>
+    <label>Bug Body Attachments</label>
+    <!-- Cosmetic_Skin 280 Misc 270-->
+    <displayPriorityInXenotype>535</displayPriorityInXenotype>
+    <!-- Cosmetic_Skin -110 -->
+    <displayPriorityInGenepack>-103</displayPriorityInGenepack>
+  </GeneCategoryDef>
+
+  
+</Defs>
