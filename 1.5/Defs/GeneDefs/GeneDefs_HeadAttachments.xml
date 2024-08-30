@@ -10,8 +10,15 @@
     <exclusionTags>
       <li>Antennas</li>
       <li>Antenna</li>
-      <li>Headbone</li>
-      <li>HeadChitin</li>
+      <li>AG_Antennae</li>
+
+      <!--I figure letting horns and Antenna stack could look cool.
+      This is also in line with other mods, e.g. Alpha Genes, etc.-->
+      <!-- <li>Headbone</li> --> 
+
+       <!--Not sure what this tag is meant to block?
+       I'd assume we want antenna and chitin to go together.-->
+      <!-- <li>HeadChitin</li> --> 
     </exclusionTags>
   </GeneDef>
   <GeneDef ParentName="BP_GeneAntennaBase">
@@ -141,6 +148,21 @@
           <defaultData>
             <layer>54</layer>
           </defaultData>
+        </drawData>
+      </li>
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyesUpper</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>79</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
         </drawData>
       </li>
     </renderNodeProperties>
@@ -286,31 +308,106 @@
   </GeneDef>
   <GeneDef ParentName="BP_GenefloofBase">
     <defName>Moth_floof</defName>
-    <label>Neck Fluff</label>
-    <description>Carriers of this gene have a floofy mane of neck fluff. Moth approved!</description>
+    <label>White Neck Fluff</label>
+    <description>Carriers of this gene have a floofy white mane of neck fluff. Moth approved!</description>
     <iconPath>UI/Icons/Genes/BugParts_Mothfluff</iconPath>
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
         <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>
-          <dataNorth>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
             <layer>25</layer>
             <offset>(0.0, 0.0, 0.35)</offset>
-          </dataNorth>
-          <dataSouth>
-            <layer>25</layer>
-            <offset>(-0.0, 0.0, 0.35)</offset>
-          </dataSouth>
+          </defaultData>
           <dataEast>
             <layer>25</layer>
-            <offset>(-0.0, 0.0, 0.35)</offset>
+            <offset>(0.075, 0.0, 0.40)</offset>
           </dataEast>
+          <dataWest>
+            <layer>25</layer>
+            <offset>(-0.075, 0.0, 0.40)</offset>
+          </dataWest>
         </drawData>
         <drawSize>1</drawSize>
       </li>
     </renderNodeProperties>
   </GeneDef>
+  <GeneDef ParentName="BP_GenefloofBase">
+    <defName>Moth_floof_HairClr</defName>
+    <label>Neck Fluff</label>
+    <description>Carriers of this gene have a floofy mane of neck fluff. Moth approved!\n\nThis version is colored the same as the Carrier's hair.</description>
+    <iconPath>UI/Icons/Genes/BugParts_Mothfluff</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <colorType>Hair</colorType>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>25</layer>
+            <offset>(0.0, 0.0, 0.35)</offset>
+          </defaultData>
+          <dataEast>
+            <layer>25</layer>
+            <offset>(0.075, 0.0, 0.40)</offset>
+          </dataEast>
+          <dataWest>
+            <layer>25</layer>
+            <offset>(-0.075, 0.0, 0.40)</offset>
+          </dataWest>
+        </drawData>
+        <drawSize>1</drawSize>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <GeneDef ParentName="BP_GenefloofBase">
+    <defName>Moth_floof_SkinClr</defName>
+    <label>Bright Neck Fluff</label>
+    <description>Carriers of this gene have a floofy mane of neck fluff. Moth approved!\n\nColored a bit brighter and more desaturated than the skin of the wearer.</description>
+    <iconPath>UI/Icons/Genes/BugParts_Mothfluff</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li Class="OopsBug.OopsPawnRenderingProps">
+        <!--Messing around with the Render Node Properties...-->
+        <hsvClampMin>
+          <value>0.4</value>
+        </hsvClampMin>
+        <hsvClampMax>
+          <saturation>0.25</saturation>
+        </hsvClampMax>
+        <hsvMultiplier>
+          <saturation>0.95</saturation>
+          <value>1.35</value>
+        </hsvMultiplier>
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <nodeClass>OopsBug.PawnRenderNode_HSVTweak</nodeClass>
+        <colorType>Skin</colorType>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>25</layer>
+            <offset>(0.0, 0.0, 0.35)</offset>
+          </defaultData>
+          <dataEast>
+            <layer>25</layer>
+            <offset>(0.075, 0.0, 0.40)</offset>
+          </dataEast>
+          <dataWest>
+            <layer>25</layer>
+            <offset>(-0.075, 0.0, 0.40)</offset>
+          </dataWest>
+        </drawData>
+        <drawSize>1</drawSize>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
   <GeneDef Name="BP_GeneHornsBase" Abstract="True">
     <biostatCpx>0</biostatCpx>
     <endogeneCategory>Headbone</endogeneCategory>
