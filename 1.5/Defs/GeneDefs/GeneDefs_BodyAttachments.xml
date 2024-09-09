@@ -253,6 +253,7 @@
         <parentTagDef>Body</parentTagDef>
         <texPath>Things/Pawn/Humanlike/BodyAttachments/MegaspiderAbdomen/MantAbdomen2</texPath>
         <drawSize>(1,1)</drawSize>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
         <colorType>Skin</colorType>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>

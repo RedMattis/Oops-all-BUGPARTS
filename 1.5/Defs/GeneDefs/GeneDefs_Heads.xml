@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Heads -->
+	<GeneDef Name="BP_GeneHeadBase" Abstract="True">
+		<displayCategory>Bug_HeadAttachment</displayCategory>
+		<exclusionTags>
+			<li>AG_Heads</li>
+			<li>Heads</li>
+			<li>Head</li>
+      		<li>ShootingAccuracy</li>
+     		<li>EyeColor</li>
+		</exclusionTags>
+	</GeneDef>
+	<GeneDef ParentName="BP_GeneHeadBase">
+		<defName>BP_BeeHead</defName>
+		<label>Bee/Ant head</label>
+		<selectionWeight>0</selectionWeight>
+		<description>Carriers of this gene have two large insect eyes and a head reminicent of an ant or a bee. While unusual it's quite cute.</description>
+		<biostatCpx>1</biostatCpx>
+		<iconPath>UI/Icons/Genes/Gene_Beehead</iconPath>
+		<forcedHeadTypes>
+			<li>Bee_Average</li>
+			<li>Bee_Narrow</li>
+			<li>Bee_Gaunt</li>
+			<li>Bee_HeavyJaw</li>
+		</forcedHeadTypes>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
+		<hairTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>Bald</li>
+			</tags>
+		</hairTagFilter>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>slim</symbol>
+				</li>
+				<li>
+					<symbol>Ant</symbol>
+				</li>
+				<li>
+					<symbol>Bug</symbol>
+				</li>
+				<li>
+					<symbol>Bee</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+	</GeneDef>
+
+	<!--this spot will hold the other heads, might get a lil complicated here-->
+
+</Defs>

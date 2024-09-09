@@ -50,6 +50,40 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
+
+<!--New bee antenae :3 Also the reason why many antennae would ovveride was due to many not looknig good stacked together. But its all good~.-->
+
+<GeneDef ParentName="BP_GeneAntennaBase">
+    <defName>Bee_Antennae</defName>
+    <label>Bee antennae</label>
+    <description>Carriers of this gene have two long, dark antennae. Quite cute!</description>
+    <iconPath>UI/Icons/Genes/Gene_Antenna</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPaths>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Bee/BeeAntennaA</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Bee/BeeAntennaB</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Bee/BeeAntennaC</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Bee/BeeAntennaD</li>
+        </texPaths>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
   <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Beetle_Antennae</defName>
     <label>beetle antennae</label>
@@ -569,4 +603,38 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
+  <!--been trying to make just the head work, but no dice.-->
+<!--<GeneDef>
+    <defName>BP_Beehead</defName>
+    <label>Bee head</label>
+    <iconPath>UI/Icons/Genes/BP_Beehead</iconPath>
+    <description>Carriers of this gene have two large insect eyes and a head reminicent of an ant or a bee. While unusual it's quite cute.</description>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <exclusionTags>
+      <li>ShootingAccuracy</li>
+      <li>EyeColor</li>
+      <li>AG_Heads</li>
+      <li>Heads</li>
+      <li>Head</li>
+    </exclusionTags>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Bee_Average</li>
+      <li>Bee_Narrow</li>
+      <li>Bee_Gaunt</li>
+      <li>Bee_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+       </li>
+    </renderNodeProperties>
+  </GeneDef>-->
 </Defs>

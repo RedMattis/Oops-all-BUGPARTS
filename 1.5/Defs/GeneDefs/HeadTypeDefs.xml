@@ -114,7 +114,7 @@
     </requiredGenes>
   </HeadTypeDef>
   
-<!--Insecthead-->
+<!--Spiderhead-->
 
 
   <HeadTypeDef Name="SpiderAverageBase" ParentName="AverageBase" Abstract="True">
@@ -163,7 +163,7 @@
     </requiredGenes>
   </HeadTypeDef>
   
- <!--Insecthead2-->
+ <!--Mothheadhead2-->
  
     <HeadTypeDef Name="MothAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
@@ -209,7 +209,7 @@
     </requiredGenes>
   </HeadTypeDef>
   
-   <!--Insecthead2-->
+   <!--Mantid Head-->
  
     <HeadTypeDef Name="MantisAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
@@ -263,5 +263,54 @@
       <li>Head_Gaunt</li>
     </requiredGenes>
   </HeadTypeDef>
+
+<!--Beehead, Got it working!-->
+
+  <HeadTypeDef Name="BeeAverageBase" ParentName="AverageBase" Abstract="True">
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BP_Beehead</li>
+    </requiredGenes>
+  </HeadTypeDef>
+	
+	
+	<!--average-->
+  <HeadTypeDef ParentName="BeeAverageBase">
+    <defName>Bee_Average</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Average_Normal</graphicPath>
+  </HeadTypeDef>
+  <!--narrow-->
+   <HeadTypeDef ParentName="BeeAverageBase">
+    <defName>Bee_Narrow</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Narrow_Normal</graphicPath>
+  </HeadTypeDef> 
+  
+     <!-- Gaunt -->
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Bee_Gaunt</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Gaunt_Normal</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <selectionWeight>99999</selectionWeight>
+    <requiredGenes>
+      <li>BP_Beehead</li>
+      <li>Head_Gaunt</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+  <!--heavy-->
+  <HeadTypeDef ParentName="HeavyJawBase">
+    <defName>Bee_HeavyJaw</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_HeavyJaw_Normal</graphicPath>
+	<randomChosen>false</randomChosen>
+    <gender>None</gender>
+	    <selectionWeight>99999</selectionWeight>
+    <requiredGenes>
+      <li>BP_Beehead</li>
+      <li>Jaw_Heavy</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
   
 </Defs>
