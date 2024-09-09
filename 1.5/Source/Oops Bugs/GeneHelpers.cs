@@ -77,5 +77,26 @@ namespace OopsBug
 
             return null;
         }
+
+
+        public static List<OopsGeneExtension> GetOopsGeneExtensions(Pawn pawn)
+        {
+            var activeGenes = GetAllActiveGenes(pawn);
+            return GetGeneExtFromGenes(activeGenes.Select(x=>x.def));
+        }
+
+        public static List<OopsGeneExtension> GetGeneExtFromGenes(this IEnumerable<GeneDef> geneList)
+        {
+            List<OopsGeneExtension> result = new();
+            foreach (var gene in geneList)
+            {
+                var ext = gene.GetModExtension<OopsGeneExtension>();
+                if (ext != null)
+                {
+                    result.Add(ext);
+                }
+            }
+            return result;
+        }
     }
 }

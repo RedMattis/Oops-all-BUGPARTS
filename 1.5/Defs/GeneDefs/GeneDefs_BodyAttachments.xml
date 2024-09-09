@@ -117,11 +117,36 @@
     <biostatCpx>1</biostatCpx>
     <selectionWeight>0</selectionWeight>
     <renderNodeProperties Inherit="False">
-      <li>
+      <li Class="OopsBug.PawnComplexRenderingProps">
         <parentTagDef>Body</parentTagDef>
         <texPath>Things/Pawn/Humanlike/BodyAttachments/BeeAbdomen/Beetail</texPath>
         <drawSize>(1.25,1.25)</drawSize>
-        <colorType>Skin</colorType>
+        <nodeClass>OopsBug.PawnRenderNode_Complex</nodeClass>
+
+        <!-- Custom Props! -->
+        <colorA>
+           <skinColor>true</skinColor>
+           <color>255, 245, 245</color>
+        
+          <!-- <colourRange>
+            <li>255,64,64</li>
+            <li>128,255,128</li>
+            <li>128,128,255</li>
+            <li>255,64,64</li>
+           </colourRange> -->
+        </colorA>
+        <colorB>
+          <hairColor>true</hairColor>
+          <!-- <colourRange>
+          <li>255,64,64</li>
+          <li>128,255,128</li>
+          <li>128,128,255</li>
+          <li>255,64,64</li>
+          </colourRange> -->
+        </colorB>
+        <isFurskin>false</isFurskin> <!--Default is already false. This is just here as an example.-->
+        <!-- End Custom Props -->
+
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>

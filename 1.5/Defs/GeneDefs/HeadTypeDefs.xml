@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-<!--HeadTypes-->
+  <!--HeadTypes-->
 
-	<!-- Exoskin -->
+  <!-- Exoskin -->
 
   <!-- Average -->
   <HeadTypeDef Name="ExoskinAverageBase" ParentName="AverageBase" Abstract="True">
@@ -28,36 +28,36 @@
     <defName>Exoskin_Average3</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average3_Normal</graphicPath>
   </HeadTypeDef>
-  
+
   <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average4</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average4_Normal</graphicPath>
   </HeadTypeDef>
-  
-   <HeadTypeDef ParentName="ExoskinAverageBase">
+
+  <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average5</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average5_Normal</graphicPath>
   </HeadTypeDef>
-  
+
   <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average1_Wide</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average1_Wide</graphicPath>
   </HeadTypeDef>
-  
-   <HeadTypeDef ParentName="ExoskinAverageBase">
+
+  <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average2_Wide</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average2_Wide</graphicPath>
   </HeadTypeDef>
-  
+
   <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average3_Wide</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average3_Wide</graphicPath>
   </HeadTypeDef>
-   
+
   <HeadTypeDef ParentName="ExoskinAverageBase">
     <defName>Exoskin_Average4_Wide</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Average4_Wide</graphicPath>
-  </HeadTypeDef> 
+  </HeadTypeDef>
 
   <!-- Narrow  -->
   <HeadTypeDef Name="ExoskinNarrowBase" ParentName="NarrowBase" Abstract="True">
@@ -87,8 +87,8 @@
     <defName>Exoskin_Narrow4</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Narrow4_Normal</graphicPath>
   </HeadTypeDef>
- 
-   <!-- Gaunt -->
+
+  <!-- Gaunt -->
   <HeadTypeDef ParentName="AverageBase">
     <defName>Exoskin_Gaunt</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Gaunt_Normal</graphicPath>
@@ -101,20 +101,20 @@
     </requiredGenes>
   </HeadTypeDef>
 
-<!--heavy-->
+  <!--heavy-->
   <HeadTypeDef ParentName="HeavyJawBase">
     <defName>Exoskin_HeavyJaw</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Exoskin_Heavy_Normal</graphicPath>
-	<randomChosen>false</randomChosen>
+    <randomChosen>false</randomChosen>
     <gender>None</gender>
-	    <selectionWeight>99999</selectionWeight>
+    <selectionWeight>99999</selectionWeight>
     <requiredGenes>
       <li>Exoskin</li>
       <li>Jaw_Heavy</li>
     </requiredGenes>
   </HeadTypeDef>
-  
-<!--Spiderhead-->
+
+  <!--Spiderhead-->
 
 
   <HeadTypeDef Name="SpiderAverageBase" ParentName="AverageBase" Abstract="True">
@@ -124,20 +124,20 @@
       <li>BP_Spidereyes</li>
     </requiredGenes>
   </HeadTypeDef>
-	
-	
-	<!--average-->
+
+
+  <!--average-->
   <HeadTypeDef ParentName="SpiderAverageBase">
     <defName>Spiderhead_Average1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Average1_Normal</graphicPath>
   </HeadTypeDef>
   <!--narrow-->
-   <HeadTypeDef ParentName="SpiderAverageBase">
+  <HeadTypeDef ParentName="SpiderAverageBase">
     <defName>Spiderhead_Narrow1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Narrow1_Normal</graphicPath>
-  </HeadTypeDef> 
-  
-     <!-- Gaunt -->
+  </HeadTypeDef>
+
+  <!-- Gaunt -->
   <HeadTypeDef ParentName="AverageBase">
     <defName>Spiderhead_Gaunt</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Gaunt_Normal</graphicPath>
@@ -149,41 +149,41 @@
       <li>Head_Gaunt</li>
     </requiredGenes>
   </HeadTypeDef>
-  
+
   <!--heavy-->
   <HeadTypeDef ParentName="HeavyJawBase">
     <defName>Spiderhead_HeavyJaw</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Heavy_Normal</graphicPath>
-	<randomChosen>false</randomChosen>
+    <randomChosen>false</randomChosen>
     <gender>None</gender>
-	    <selectionWeight>99999</selectionWeight>
+    <selectionWeight>99999</selectionWeight>
     <requiredGenes>
       <li>BP_Spidereyes</li>
       <li>Jaw_Heavy</li>
     </requiredGenes>
   </HeadTypeDef>
-  
- <!--Mothheadhead2-->
- 
-    <HeadTypeDef Name="MothAverageBase" ParentName="AverageBase" Abstract="True">
+
+  <!--Mothheadhead2-->
+
+  <HeadTypeDef Name="MothAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
     <gender>None</gender>
     <requiredGenes>
       <li>BP_Motheyes</li>
     </requiredGenes>
   </HeadTypeDef>
-  	<!--average-->
+  <!--average-->
   <HeadTypeDef ParentName="MothAverageBase">
     <defName>Mothhead_Average1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Average1_Normal</graphicPath>
   </HeadTypeDef>
   <!--narrow-->
-   <HeadTypeDef ParentName="MothAverageBase">
+  <HeadTypeDef ParentName="MothAverageBase">
     <defName>Mothhead_Narrow1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Narrow1_Normal</graphicPath>
-  </HeadTypeDef> 
-  
-     <!-- Gaunt -->
+  </HeadTypeDef>
+
+  <!-- Gaunt -->
   <HeadTypeDef ParentName="AverageBase">
     <defName>Mothhead_Gaunt</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Gaunt_Normal</graphicPath>
@@ -195,63 +195,63 @@
       <li>Head_Gaunt</li>
     </requiredGenes>
   </HeadTypeDef>
-  
+
   <!--heavy-->
   <HeadTypeDef ParentName="HeavyJawBase">
     <defName>Mothhead_HeavyJaw</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Arachnid/Arachnid_Heavy_Normal</graphicPath>
-	<randomChosen>false</randomChosen>
+    <randomChosen>false</randomChosen>
     <gender>None</gender>
-	    <selectionWeight>99999</selectionWeight>
+    <selectionWeight>99999</selectionWeight>
     <requiredGenes>
       <li>BP_Motheyes</li>
       <li>Jaw_Heavy</li>
     </requiredGenes>
   </HeadTypeDef>
-  
-   <!--Mantid Head-->
- 
-    <HeadTypeDef Name="MantisAverageBase" ParentName="AverageBase" Abstract="True">
+
+  <!--Mantid Head-->
+
+  <HeadTypeDef Name="MantisAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
     <gender>None</gender>
     <requiredGenes>
       <li>Insectiod_Mantideyes</li>
     </requiredGenes>
   </HeadTypeDef>
-  
-  	<!--average-->
+
+  <!--average-->
   <HeadTypeDef ParentName="MantisAverageBase">
     <defName>Mantidhead_Average1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Average1_Normal</graphicPath>
   </HeadTypeDef>
-   <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantisAverageBase">
     <defName>Mantidhead_Average2</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Average2_Normal</graphicPath>
-  </HeadTypeDef> 
+  </HeadTypeDef>
   <!--narrow-->
-    <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantisAverageBase">
     <defName>Mantidhead_Narrow1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Narrow1_Normal</graphicPath>
   </HeadTypeDef>
-   <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantisAverageBase">
     <defName>Mantidhead_Narrow2</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Narrow2_Normal</graphicPath>
-  </HeadTypeDef> 
-  
-    <!--heavy-->
+  </HeadTypeDef>
+
+  <!--heavy-->
   <HeadTypeDef ParentName="HeavyJawBase">
     <defName>Mantidhead_HeavyJaw</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Heavy_Normal</graphicPath>
-	<randomChosen>false</randomChosen>
+    <randomChosen>false</randomChosen>
     <gender>None</gender>
-	    <selectionWeight>99999</selectionWeight>
+    <selectionWeight>99999</selectionWeight>
     <requiredGenes>
       <li>Insectiod_Mantideyes</li>
       <li>Jaw_Heavy</li>
     </requiredGenes>
   </HeadTypeDef>
-  
-       <!-- Gaunt -->
+
+  <!-- Gaunt -->
   <HeadTypeDef ParentName="AverageBase">
     <defName>Mantidhead_Gaunt</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Gaunt_Normal</graphicPath>
@@ -264,53 +264,53 @@
     </requiredGenes>
   </HeadTypeDef>
 
-<!--Beehead, Got it working!-->
+  <!--Beehead, Got it working!-->
 
   <HeadTypeDef Name="BeeAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
     <gender>None</gender>
     <requiredGenes>
-      <li>BP_Beehead</li>
+      <li>BP_BeeHead</li>
     </requiredGenes>
   </HeadTypeDef>
-	
-	
-	<!--average-->
+
+
+  <!--average-->
   <HeadTypeDef ParentName="BeeAverageBase">
     <defName>Bee_Average</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Average_Normal</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee_Colorable/Bee_Average_Normal</graphicPath>
   </HeadTypeDef>
   <!--narrow-->
-   <HeadTypeDef ParentName="BeeAverageBase">
+  <HeadTypeDef ParentName="BeeAverageBase">
     <defName>Bee_Narrow</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Narrow_Normal</graphicPath>
-  </HeadTypeDef> 
-  
-     <!-- Gaunt -->
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee_Colorable/Bee_Narrow_Normal</graphicPath>
+  </HeadTypeDef>
+
+  <!-- Gaunt -->
   <HeadTypeDef ParentName="AverageBase">
     <defName>Bee_Gaunt</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_Gaunt_Normal</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee_Colorable/Bee_Gaunt_Normal</graphicPath>
     <randomChosen>false</randomChosen>
     <gender>None</gender>
     <selectionWeight>99999</selectionWeight>
     <requiredGenes>
-      <li>BP_Beehead</li>
+      <li>BP_BeeHead</li>
       <li>Head_Gaunt</li>
     </requiredGenes>
   </HeadTypeDef>
-  
+
   <!--heavy-->
   <HeadTypeDef ParentName="HeavyJawBase">
     <defName>Bee_HeavyJaw</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/Bee/Bee_HeavyJaw_Normal</graphicPath>
-	<randomChosen>false</randomChosen>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Bee_Colorable/Bee_HeavyJaw_Normal</graphicPath>
+    <randomChosen>false</randomChosen>
     <gender>None</gender>
-	    <selectionWeight>99999</selectionWeight>
+    <selectionWeight>99999</selectionWeight>
     <requiredGenes>
-      <li>BP_Beehead</li>
+      <li>BP_BeeHead</li>
       <li>Jaw_Heavy</li>
     </requiredGenes>
   </HeadTypeDef>
 
-  
+
 </Defs>

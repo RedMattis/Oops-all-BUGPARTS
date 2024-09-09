@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,24 +10,6 @@ using Verse;
 
 namespace OopsBug
 {
-    public class HSVColor
-    {
-        public float? hue = null;
-        public float? saturation = null;
-        public float? value = null;
-    }
-    public class OopsPawnRenderingProps : PawnRenderNodeProperties
-    {
-
-        /// <summary>
-        /// Sets the lowest permitted value/saturation. (Hue does nothing).
-        /// Runs before the multiplier
-        /// </summary>
-        public HSVColor hsvClampMin = null; 
-        public HSVColor hsvClampMax = null;
-        public HSVColor hsvMultiplier = null;
-    }
-
     public class PawnRenderNode_FurSkinClr : PawnRenderNode_Fur
     {
         public PawnRenderNode_FurSkinClr(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
@@ -40,10 +23,79 @@ namespace OopsBug
         }
     }
 
+    public class PawnComplexRenderingProps : PawnRenderNodeProperties
+    {
+        public ShaderTypeDef shader = null;
+        public ColorSetting colorA = new();
+        public ColorSetting colorB = new();
+
+        /// <summary>
+        /// Hacky but this avoid us making a seperate class for what is basically just changing the texture path.
+        /// </summary>
+        public bool isFurskin = false;
+    }
+
+    public class PawnRenderNode_Complex : PawnRenderNode
+    {
+        PawnComplexRenderingProps ComplexProps => (PawnComplexRenderingProps)props;
+        public PawnRenderNode_Complex(Pawn pawn, PawnComplexRenderingProps props, PawnRenderTree tree)
+            : base(pawn, props, tree)
+        {
+        }
+
+        protected override string TexPathFor(Pawn pawn)
+        {
+            if (ComplexProps.isFurskin)
+            {
+                return pawn.story?.furDef.GetFurBodyGraphicPath(pawn);
+            }
+            else return base.TexPathFor(pawn);
+        }
+
+        public override Graphic GraphicFor(Pawn pawn)
+        {
+            if (ComplexProps.isFurskin && pawn.story?.furDef == null)
+            {
+                return null;
+            }
+
+            string text = TexPathFor(pawn);
+            if (text.NullOrEmpty())
+            {
+                Log.Warning($"[OopsBug] No texture path for {pawn}");
+                return null;
+            }
+            Color colorOne = ComplexProps.colorA.GetColor(pawn, Color.white, ColorSetting.clrOneKey);
+            Color colorTwo = ComplexProps.colorB.GetColor(pawn, Color.white, ColorSetting.clrTwoKey);
+            ShaderTypeDef shader = ComplexProps.shader;
+
+            var result = OopsRenderingManager.GetCachableGraphics(text, Vector2.one, shader, colorOne, colorTwo);
+            return result;
+        }
+    }
+
+    public class HSVColor
+    {
+        public float? hue = null;
+        public float? saturation = null;
+        public float? value = null;
+    }
+    public class HSVPawnRenderingProps : PawnRenderNodeProperties
+    {
+
+        /// <summary>
+        /// Sets the lowest permitted value/saturation. (Hue does nothing).
+        /// Runs before the multiplier
+        /// </summary>
+        public HSVColor hsvClampMin = null; 
+        public HSVColor hsvClampMax = null;
+        public HSVColor hsvMultiplier = null;
+    }
+
     public class PawnRenderNode_HSVTweak : PawnRenderNode
     {
-        OopsPawnRenderingProps OopsProps => (OopsPawnRenderingProps)props;
-        public PawnRenderNode_HSVTweak(Pawn pawn, OopsPawnRenderingProps props, PawnRenderTree tree)
+        HSVPawnRenderingProps OopsProps => (HSVPawnRenderingProps)props;
+        public PawnRenderNode_HSVTweak(Pawn pawn, HSVPawnRenderingProps props, PawnRenderTree tree)
             : base(pawn, props, tree)
         {
         }

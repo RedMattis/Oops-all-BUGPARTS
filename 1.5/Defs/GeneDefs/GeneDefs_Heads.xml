@@ -7,8 +7,8 @@
 			<li>AG_Heads</li>
 			<li>Heads</li>
 			<li>Head</li>
-      		<li>ShootingAccuracy</li>
-     		<li>EyeColor</li>
+			<li>ShootingAccuracy</li>
+			<li>EyeColor</li>
 		</exclusionTags>
 	</GeneDef>
 	<GeneDef ParentName="BP_GeneHeadBase">
@@ -58,6 +58,27 @@
         <offset>0.2</offset>
       </li>
     </capMods>
+		<modExtensions>
+      <li Class="OopsBug.OopsGeneExtension">
+				<headShader>
+					<shader>CutoutComplex</shader>
+					<colorA>
+						<!-- If multiple colors source are set they will be multiplied with one another. -->
+						 <skinColor>true</skinColor>
+						 <color>255, 245, 245</color> <!-- Compensating for the fact that I desaturated the textures for the eye color test. -->
+					</colorA>
+					<colorB>
+						<!-- <color>(1,1,1,1)</color> --> <!-- Use this is you just want to use the base color. Or make the area black in the mask. -->
+						 <colourRange>
+							<li>255,64,64</li>
+							<li>128,255,128</li>
+							<li>128,128,255</li>
+							<li>255,64,64</li>
+						 </colourRange>
+					</colorB>
+				</headShader>
+			</li>
+    </modExtensions>
 	</GeneDef>
 
 	<!--this spot will hold the other heads, might get a lil complicated here-->
