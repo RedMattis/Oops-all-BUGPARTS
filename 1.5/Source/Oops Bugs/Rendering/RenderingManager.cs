@@ -50,7 +50,6 @@ namespace OopsBug
         {
             bool didSet = false;
             Color finalClr = Color.white;
-            // We could probably blend them if several are set, if that should that be preferable.
             if (pawn?.story != null)
             {
                 if (hairColor)

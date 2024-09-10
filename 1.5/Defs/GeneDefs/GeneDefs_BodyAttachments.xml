@@ -213,10 +213,10 @@
         <drawData>
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
           <dataNorth>
-            <offset>(0.0, 0.2, -0.0)</offset>
+            <offset>(0.0, 0.2, -0.3)</offset>
           </dataNorth>
           <dataSouth>
-            <offset>(-0.0, -0.1, -0.0)</offset>
+            <offset>(-0.0, -0.1, -0.3)</offset>
           </dataSouth>
           <dataEast>
             <offset>(-0.0, -0.1, -0.30)</offset>
