@@ -63,11 +63,12 @@
 			<li>Beard_NoBeardOnly</li>
 			<li>Insectoid_body</li>
 			<li>FireWeakness</li>
+			<li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+			<li MayRequire="sarg.alphagenes">AG_HivelingVoice</li>
 			<li>Moth_floof</li>
 			<li>BP_Motheyes</li>
 			<li>BP_lunarmothwings</li>
 			<li>Skin_SheerWhite</li>
-			<li>Skin_PaleYellow</li>
 			<li>MinTemp_SmallIncrease</li>
 			<li>Mutiplelimbs</li>
 			<li>Fertile</li>
@@ -78,9 +79,7 @@
 			<li>Pain_Extra</li>
 			<li>UVSensitivity_Mild</li>
 			<li>Libido_High</li>
-			<li>Hair_Pink</li>
-			<li>Hair_SandyBlonde</li>
-			<li>Hair_SnowWhite</li>
+			<li>Hair_BaldOnly</li>
 
 		</genes>
 	</XenotypeDef>

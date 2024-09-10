@@ -51,7 +51,7 @@
     </renderNodeProperties>
   </GeneDef>
 
-<!--New bee antenae :3 Also the reason why many antennae would ovveride was due to many not looknig good stacked together. But its all good~.-->
+<!--New bee antenae :3 Also the reason why many antennae would ovveride was due to many not looking good stacked together. But its all good~.-->
 
 <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Bee_Antennae</defName>
@@ -87,7 +87,7 @@
   <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Beetle_Antennae</defName>
     <label>beetle antennae</label>
-    <description>Carriers of this gene have two long antennae. Perfect for beetles but large beetle horns ovveride this.</description>
+    <description>Carriers of this gene have two long antennae. Perfect for beetles.</description>
     <iconPath>UI/Icons/Genes/Gene_Antenna</iconPath>
     <renderNodeProperties Inherit="False">
       <li>
@@ -114,7 +114,7 @@
   <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Lunarmoth_Antennae</defName>
     <label>moth antennae</label>
-    <description>Carriers of this gene have two long antennae. Perfect for beetles but large beetle horns ovveride this.</description>
+    <description>Carriers of this gene have two long antennae. Perfect for beetles.</description>
     <iconPath>UI/Icons/Genes/Gene_MothAntenna</iconPath>
     <renderNodeProperties Inherit="False">
       <li>
@@ -154,7 +154,7 @@
   
   <GeneDef ParentName="BP_GeneeyesBase">
     <defName>Insectiod_Mantideyes</defName>
-    <label>Mantid eyes</label>
+    <label>Mantis Features</label>
     <description>Carriers of this gene have large, powerful, compound insectoid eyes along with a mantis face.</description>
     <iconPath>Genes/Icons/BugParts_MantidEyesIcon</iconPath>
     <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
@@ -241,7 +241,7 @@
         <drawData>
           <defaultData>
             <layer>54</layer>
-            <offset>(0, 0, -0.25)</offset>
+            <offset>(-0.04, 0, -0.25)</offset>
           </defaultData>
         </drawData>
       </li>
@@ -255,7 +255,7 @@
         <drawData>
           <defaultData>
             <layer>54</layer>
-            <offset>(0, 0, -0.25)</offset>
+            <offset>(0.04, 0, -0.25)</offset>
             <flip>true</flip>
           </defaultData>
           <dataWest>
