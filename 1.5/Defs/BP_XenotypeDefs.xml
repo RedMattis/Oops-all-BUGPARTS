@@ -23,6 +23,7 @@
 			<li MayRequire="sarg.alphagenes">AG_HivelingVoice</li>
 			<li MayRequire="sarg.alphagenes">AG_UnsettlingAppearance</li>
 			<li MayRequire="sarg.alphagenes">AG_ColdSlowness</li>
+			<li MayRequire="RedMattis.BigSmall.Core">BS_AlienApperanceStandards</li>
 			<li>PollutionRush</li>
 			<li>WoundHealing_Slow</li>
 			<li>ToxicEnvironmentResistance_Total</li>
@@ -55,31 +56,32 @@
 		<!-- <nameMaker MayRequire="RedMattis.BetterPrerequisites">BS_Bug_NamerMale</nameMaker>
 		<nameMakerFemale MayRequire="RedMattis.BetterPrerequisites">BS_Bug_NamerFem</nameMakerFemale> -->
 		<chanceToUseNameMaker>0.7</chanceToUseNameMaker>
-		<combatPowerFactor>0.2</combatPowerFactor>
+		<combatPowerFactor>0.1</combatPowerFactor>
 		<genes>
 			<li>Lunarmoth_Antennae</li>
-			<li>AptitudeRemarkable_Animals</li>
 			<li>AptitudeRemarkable_Plants</li>
 			<li>Beard_NoBeardOnly</li>
 			<li>Insectoid_body</li>
 			<li>FireWeakness</li>
 			<li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
 			<li MayRequire="sarg.alphagenes">AG_HivelingVoice</li>
+			<li MayRequire="RedMattis.BigSmall.Core">BS_AlienApperanceStandards_Lesser</li>
 			<li>Moth_floof</li>
 			<li>BP_Motheyes</li>
 			<li>BP_lunarmothwings</li>
 			<li>Skin_SheerWhite</li>
 			<li>MinTemp_SmallIncrease</li>
+			<li>Beauty_Pretty</li>
 			<li>Mutiplelimbs</li>
-			<li>Fertile</li>
 			<li>Body_Thin</li>
 			<li>Body_Standard</li>
-			<li>Beauty_Beautiful</li>
-			<li>Delicate</li>
 			<li>Pain_Extra</li>
 			<li>UVSensitivity_Mild</li>
 			<li>Libido_High</li>
-			<li>Hair_BaldOnly</li>
+			<li>Hair_SandyBlonde</li>
+			<li>Hair_Pink</li>
+			<li>Hair_Blonde</li>
+			<!-- <li>Hair_BaldOnly</li> removing to test out hair styles-->
 
 		</genes>
 	</XenotypeDef>
@@ -110,6 +112,7 @@
 			<li>RobustDigestion</li>
 			<li>FireWeakness</li>
 			<li>BugParts_Abdomen_Mantis</li>
+			<li MayRequire="RedMattis.BigSmall.Core">BS_AlienApperanceStandards_Lesser</li>
 			<li>Insectiod_Mantideyes</li>
 			<li>BP_MantisWings</li>
 			<li>Skin_SheerWhite</li>

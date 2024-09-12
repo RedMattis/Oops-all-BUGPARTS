@@ -7,16 +7,17 @@
 			<li>AG_Heads</li>
 			<li>Heads</li>
 			<li>Head</li>
-			<li>ShootingAccuracy</li>
 			<li>EyeColor</li>
 		</exclusionTags>
 	</GeneDef>
+
 	<GeneDef ParentName="BP_GeneHeadBase">
 		<defName>BP_BeeHead</defName>
 		<label>Bee/Ant head</label>
 		<selectionWeight>0</selectionWeight>
 		<description>Carriers of this gene have two large insect eyes and a head reminicent of an ant or a bee. While unusual it's quite cute.</description>
 		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
 		<iconPath>UI/Icons/Genes/Gene_Beehead</iconPath>
 		<forcedHeadTypes>
 			<li>Bee_Average</li>
@@ -39,7 +40,7 @@
 		<symbolPack>
 			<prefixSymbols>
 				<li>
-					<symbol>slim</symbol>
+					<symbol>Honey</symbol>
 				</li>
 				<li>
 					<symbol>Ant</symbol>
@@ -59,6 +60,10 @@
       </li>
     </capMods>
 		<modExtensions>
+  <li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+    <disableFacialAnimations>true</disableFacialAnimations>
+  </li>
+
       <li Class="OopsBug.OopsGeneExtension">
 				<headShader>
 					<shader>CutoutComplex</shader>
@@ -81,6 +86,84 @@
     </modExtensions>
 	</GeneDef>
 
+
 	<!--this spot will hold the other heads, might get a lil complicated here-->
+
+	<!--Mantis heads
+<GeneDef ParentName="BP_GeneHeadBase">
+    <defName>BP_MantisHead</defName>
+    <label>Mantis Head</label>
+    <description>Carriers of this gene have large, powerful, compound eyes paired with a mantis head.</description>
+	<biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <iconPath>Genes/Icons/BugParts_MantisEyesIcon</iconPath>
+    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+    <forcedHeadTypes>
+      <li>BP_Mantishead_Average1</li>
+	  <li>BP_Mantishead_Average2</li>
+      <li>BP_Mantishead_Narrow1</li>
+      <li>BP_Mantishead_Narrow2</li>
+      <li>BP_Mantishead_Gaunt</li>
+      <li>BP_Mantishead_HeavyJaw</li>
+    </forcedHeadTypes>
+        <beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
+		<hairTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>Bald</li>
+			</tags>
+		</hairTagFilter>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>Blood</symbol>
+				</li>
+				<li>
+					<symbol>Mantis</symbol>
+				</li>
+				<li>
+					<symbol>Bug</symbol>
+				</li>
+				<li>
+					<symbol>Mandible</symbol>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>1.2</offset>
+      </li>
+    </capMods>
+	<modExtensions>
+  		<li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+    	<disableFacialAnimations>true</disableFacialAnimations>
+  		</li>
+		    <li Class="OopsBug.OopsGeneExtension">
+				<headShader>
+					<shader>CutoutComplex</shader>
+					<colorA>
+						
+						 <skinColor>true</skinColor>
+						 <color>255, 245, 245</color> 
+					</colorA>
+					<colorB>
+						
+						 <colourRange>
+							<li>255,64,64</li>
+							<li>128,255,128</li>
+							<li>128,128,255</li>
+							<li>255,64,64</li>
+						 </colourRange>
+					</colorB>
+				</headShader>
+			</li>
+    </modExtensions>
+  </GeneDef>-->
 
 </Defs>

@@ -114,7 +114,7 @@
   <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Lunarmoth_Antennae</defName>
     <label>moth antennae</label>
-    <description>Carriers of this gene have two long antennae. Perfect for beetles.</description>
+    <description>Carriers of this gene have two long antennae. Perfect for moths.</description>
     <iconPath>UI/Icons/Genes/Gene_MothAntenna</iconPath>
     <renderNodeProperties Inherit="False">
       <li>
@@ -124,6 +124,8 @@
         <colorType>Skin</colorType> -->
         <texPaths>
           <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/mothantennea</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/mothantennea2</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/mothantennea3</li>
         </texPaths>
         <drawData>
           <defaultData>
@@ -144,20 +146,14 @@
     <displayOrderInCategory>80</displayOrderInCategory>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <randomChosen>true</randomChosen>
-    <exclusionTags>
-      <li>Headeye</li>
-      <li>Headeyes</li>
-      <li>Horn</li>
-      <li>Horns</li>
-    </exclusionTags>
   </GeneDef>
   
   <GeneDef ParentName="BP_GeneeyesBase">
     <defName>Insectiod_Mantideyes</defName>
-    <label>Mantis Features</label>
-    <description>Carriers of this gene have large, powerful, compound insectoid eyes along with a mantis face.</description>
+    <label>Mantid Features</label>
+    <description>Carriers of this gene have four large and powerful alien mantid eyes along with a mantid face.</description>
     <iconPath>Genes/Icons/BugParts_MantidEyesIcon</iconPath>
-    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
     <capMods>
       <li>
         <capacity>Sight</capacity>
@@ -171,8 +167,15 @@
       <li>Mantidhead_Gaunt</li>
       <li>Mantidhead_HeavyJaw</li>
     </forcedHeadTypes>
+        <modExtensions>
+          <li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+          <disableFacialAnimations>true</disableFacialAnimations>
+          </li>
+        </modExtensions>
     <renderNodeProperties Inherit="False">
       <li>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
         <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyes</texPath>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -185,6 +188,8 @@
         </drawData>
       </li>
       <li>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
         <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyesUpper</texPath>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -201,15 +206,31 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
+
   <GeneDef>
     <defName>BP_Motheyes</defName>
-    <label>Moth eyes</label>
+    <label>Moth Head</label>
     <iconPath>UI/Icons/Genes/BP_Motheyes</iconPath>
-    <description>Carriers of this gene have two large eyes, that can almost see things before they happen.</description>
+    <ignoreDarkness>true</ignoreDarkness>
+    <description>Carriers of this gene have two large eyes, that can almost see things before they happen. They can see fairly well in the dark.</description>
     <displayCategory>Bug_HeadAttachment</displayCategory>
     <displayOrderInCategory>52</displayOrderInCategory>
-    <biostatMet>-1</biostatMet>
+    <biostatMet>-2</biostatMet>
     <biostatCpx>1</biostatCpx>
+        <symbolPack>
+      <prefixSymbols>
+        <li><symbol>dark</symbol></li>
+        <li><symbol>night</symbol></li>
+        <li><symbol>dim</symbol></li>
+        <li><symbol>Lamp</symbol></li>
+        <li><symbol>Moon</symbol></li>
+        <li><symbol>Luna</symbol></li>
+        <li><symbol>umbra</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>Moth</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
     <selectionWeight>0</selectionWeight>
     <exclusionTags>
       <li>ShootingAccuracy</li>
@@ -230,7 +251,27 @@
       <li>Mothhead_Gaunt</li>
       <li>Mothhead_HeavyJaw</li>
     </forcedHeadTypes>
+    <modExtensions>
+          <li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+          <disableFacialAnimations>true</disableFacialAnimations>
+          </li>
+        </modExtensions>
     <renderNodeProperties Inherit="False">
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MothEyes</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>79</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  <!--  <renderNodeProperties Inherit="False">
       <li Class="PawnRenderNodeProperties_Eye">
         <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_BugEyes</texPath>
         <anchorTag>RightEye</anchorTag>
@@ -240,7 +281,7 @@
         <side>Right</side>
         <drawData>
           <defaultData>
-            <layer>54</layer>
+            <layer>79</layer>
             <offset>(-0.04, 0, -0.25)</offset>
           </defaultData>
         </drawData>
@@ -254,7 +295,7 @@
         <side>Left</side>
         <drawData>
           <defaultData>
-            <layer>54</layer>
+            <layer>79</layer>
             <offset>(0.04, 0, -0.25)</offset>
             <flip>true</flip>
           </defaultData>
@@ -263,8 +304,7 @@
           </dataWest>
         </drawData>
       </li>
-    </renderNodeProperties>
-  </GeneDef>
+    </renderNodeProperties> -->
   <GeneDef>
     <defName>BP_Spidereyes</defName>
     <label>spider eyes</label>
@@ -294,41 +334,27 @@
       <li>Spiderhead_Gaunt</li>
       <li>Spiderhead_HeavyJaw</li>
     </forcedHeadTypes>
+    <modExtensions>
+          <li Class="BetterPrerequisites.GeneExtension" MayRequire="RedMattis.BetterPrerequisites">
+          <disableFacialAnimations>true</disableFacialAnimations>
+          </li>
+        </modExtensions>
     <renderNodeProperties Inherit="False">
-      <li Class="PawnRenderNodeProperties_Eye">
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_Spidereyes</texPath>
-        <anchorTag>RightEye</anchorTag>
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/SpiderEyes</texPath>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
         <parentTagDef>Head</parentTagDef>
-        <drawSize>0.2</drawSize>
-        <side>Right</side>
         <drawData>
           <defaultData>
-            <layer>54</layer>
-            <offset>(0, 0, -0.25)</offset>
+            <layer>79</layer>
           </defaultData>
-        </drawData>
-      </li>
-      <li Class="PawnRenderNodeProperties_Eye">
-        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/BP_Spidereyes</texPath>
-        <anchorTag>LeftEye</anchorTag>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <parentTagDef>Head</parentTagDef>
-        <drawSize>0.2</drawSize>
-        <side>Left</side>
-        <drawData>
-          <defaultData>
-            <layer>54</layer>
-            <offset>(0, 0, -0.25)</offset>
-            <flip>true</flip>
-          </defaultData>
-          <dataWest>
-            <flip>false</flip>
-          </dataWest>
         </drawData>
       </li>
     </renderNodeProperties>
   </GeneDef>
+
   <GeneDef Name="BP_GenefloofBase" Abstract="True">
     <biostatCpx>0</biostatCpx>
     <endogeneCategory>Headbone</endogeneCategory>

@@ -211,7 +211,7 @@
 
   <!--Mantid Head-->
 
-  <HeadTypeDef Name="MantisAverageBase" ParentName="AverageBase" Abstract="True">
+  <HeadTypeDef Name="MantidAverageBase" ParentName="AverageBase" Abstract="True">
     <randomChosen>false</randomChosen>
     <gender>None</gender>
     <requiredGenes>
@@ -220,20 +220,20 @@
   </HeadTypeDef>
 
   <!--average-->
-  <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantidAverageBase">
     <defName>Mantidhead_Average1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Average1_Normal</graphicPath>
   </HeadTypeDef>
-  <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantidAverageBase">
     <defName>Mantidhead_Average2</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Average2_Normal</graphicPath>
   </HeadTypeDef>
   <!--narrow-->
-  <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantidAverageBase">
     <defName>Mantidhead_Narrow1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Narrow1_Normal</graphicPath>
   </HeadTypeDef>
-  <HeadTypeDef ParentName="MantisAverageBase">
+  <HeadTypeDef ParentName="MantidAverageBase">
     <defName>Mantidhead_Narrow2</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Mantid/Mantid_Narrow2_Normal</graphicPath>
   </HeadTypeDef>
@@ -312,5 +312,60 @@
     </requiredGenes>
   </HeadTypeDef>
 
+<!--Mantis Head
+
+  <HeadTypeDef Name="MantisAverageBase" ParentName="AverageBase" Abstract="True">
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <requiredGenes>
+      <li>BP_MantisHead</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+
+
+  <HeadTypeDef ParentName="MantisAverageBase">
+    <defName>Mantis_Average1</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/Mantis_Average1_Normal</graphicPath>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="MantisAverageBase">
+    <defName>Mantis_Average2</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/BP_Mantis_Average2_Normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MantisAverageBase">
+    <defName>Mantis_Narrow1</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/BP_Mantis_Narrow1_Normal</graphicPath>
+  </HeadTypeDef>
+    <HeadTypeDef ParentName="MantisAverageBase">
+    <defName>Mantis_Narrow2</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/BP_Mantis_Narrow2_Normal</graphicPath>
+  </HeadTypeDef>
+
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Mantis_Gaunt</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/BP_Mantis_Gaunt_Normal</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <selectionWeight>99999</selectionWeight>
+    <requiredGenes>
+      <li>BP_MantisHead</li>
+      <li>Head_Gaunt</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+
+  <HeadTypeDef ParentName="HeavyJawBase">
+    <defName>BP_Mantis_HeavyJaw</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Mantis/BP_Mantis_HeavyJaw_Normal</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+    <selectionWeight>99999</selectionWeight>
+    <requiredGenes>
+      <li>BP_MantisHead</li>
+      <li>Jaw_Heavy</li>
+    </requiredGenes>
+  </HeadTypeDef>-->
 
 </Defs>
