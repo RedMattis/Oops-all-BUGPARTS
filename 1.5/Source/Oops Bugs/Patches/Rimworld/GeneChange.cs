@@ -64,12 +64,26 @@ namespace OopsBug
         }
 
         [HarmonyPatch(typeof(LifeStageWorker), nameof(LifeStageWorker.Notify_LifeStageStarted))]
-
+        [HarmonyPostfix]
         public static void Post_Notify_LifeStageStarted(Pawn pawn)
         {
             if (pawn.genes != null)
             {
                 List<Gene> genes = pawn.genes.GenesListForReading;
+                foreach (Gene gene in genes.Where(x => x.Active))
+                {
+                    GeneUtils.RefreshGeneEffects(gene, true);
+                }
+            }
+        }
+
+        [HarmonyPatch(typeof(Pawn), nameof(Pawn.SpawnSetup))]
+        [HarmonyPostfix]
+        public static void Post_PostMapInit(Pawn __instance)
+        {
+            if (__instance.genes != null)
+            {
+                List<Gene> genes = __instance.genes.GenesListForReading;
                 foreach (Gene gene in genes.Where(x => x.Active))
                 {
                     GeneUtils.RefreshGeneEffects(gene, true);
