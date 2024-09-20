@@ -93,4 +93,35 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
+
+  <GeneDef>
+    <defName>Fluffbug_body</defName>
+    <label>Fluffy Insectoid body</label>
+    <labelShortAdj>Fluffybug body</labelShortAdj>
+    <description>Carriers of this gene have a chitionous body with patches of cute fluff over their chest and hips. Pollen tends to get all over it while gardening.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Exoskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <fur>Fluffybug_Body</fur>
+    <exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <missingGeneRomanceChanceFactor>0.1</missingGeneRomanceChanceFactor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>OopsBug.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
 </Defs>

@@ -15,4 +15,18 @@
     </bodyTypeGraphicPaths>
   </FurDef>
 
+  <FurDef>
+    <defName>Fluffybug_Body</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_Body_Male</Male>
+      <Female>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_Body_Female</Female>
+      <Hulk>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_Body_Hulk</Hulk>
+      <Fat>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_Body_Fat</Fat>
+      <Thin>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_Body_Thin</Thin>
+      <Child>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_BodyChild</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/BP_Fuzzy_Body/Fuzzy_BodyChild</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+
 </Defs>

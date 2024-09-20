@@ -148,6 +148,36 @@
     <randomChosen>true</randomChosen>
   </GeneDef>
   
+  <GeneDef ParentName="BP_GeneAntennaBase">
+    <defName>Feather_Antennae</defName>
+    <label>Feather antennae</label>
+    <description>Carriers of this gene have two long, Feathered antennae. Quite cute!</description>
+    <iconPath>UI/Icons/Genes/Gene_Antenna</iconPath>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPaths>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Stylized/Featherantennea1</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Stylized/Featherantennea2</li>
+          <li>Things/Pawn/Humanlike/HeadAttachments/Antenna/Stylized/Featherantennea3</li>
+        </texPaths>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+        <parentTagDef>Head</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
   <GeneDef ParentName="BP_GeneeyesBase">
     <defName>Insectiod_Mantideyes</defName>
     <label>Mantid Features</label>
@@ -374,7 +404,11 @@
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
-        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <texPaths>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
+        </texPaths>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
@@ -403,7 +437,11 @@
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
-        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <texPaths>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
+        </texPaths>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <colorType>Hair</colorType>
         <drawData>
@@ -444,7 +482,11 @@
           <value>1.35</value>
         </hsvMultiplier>
         <parentTagDef>Body</parentTagDef>
-        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
+        <texPaths>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
+        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
+        </texPaths>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <nodeClass>OopsBug.PawnRenderNode_HSVTweak</nodeClass>
         <colorType>Skin</colorType>
