@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Heads -->
+  <GeneDef Name="BP_GeneHeadBase" Abstract="True">
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <exclusionTags>
+      <li>AG_Heads</li>
+      <li>Heads</li>
+      <li>Head</li>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension" MayRequire="RedMattis.BetterPrerequisites">
+      <disableFacialAnimations>true</disableFacialAnimations>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>Exoskin</defName>
+    <label>exoskin head</label>
+    <labelShortAdj>exoskin</labelShortAdj>
+    <description>Carriers of this gene have a chitinous body and head. This is ugly to all non-insects. Most carriers of this gene are vulnerable to the cold temperatures.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <iconPath>UI/Icons/Genes/Gene_insectoidhead</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>Exoskin_Average1</li>
+      <li>Exoskin_Average2</li>
+      <li>Exoskin_Average3</li>
+      <li>Exoskin_Average4</li>
+      <li>Exoskin_Average5</li>
+      <li>Exoskin_Average1_Wide</li>
+      <li>Exoskin_Average2_Wide</li>
+      <li>Exoskin_Average3_Wide</li>
+      <li>Exoskin_Narrow1</li>
+      <li>Exoskin_Narrow2</li>
+      <li>Exoskin_Narrow3</li>
+      <li>Exoskin_Narrow4</li>
+      <li>Exoskin_Gaunt</li>
+      <li>Exoskin_HeavyJaw</li>
+    </forcedHeadTypes>
+    <statOffsets>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>BP_BeeHead</defName>
+    <label>Bee/Ant head</label>
+    <selectionWeight>0</selectionWeight>
+    <description>Carriers of this gene have two large insect eyes and a head reminicent of an ant or a bee. While unusual it's quite cute.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <iconPath>UI/Icons/Genes/Gene_Beehead</iconPath>
+    <forcedHeadTypes>
+      <li>Bee_Average</li>
+      <li>Bee_Narrow</li>
+      <li>Bee_Gaunt</li>
+      <li>Bee_HeavyJaw</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>NoBeard</li>
+      </tags>
+    </beardTagFilter>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>Honey</symbol>
+        </li>
+        <li>
+          <symbol>Ant</symbol>
+        </li>
+        <li>
+          <symbol>Bug</symbol>
+        </li>
+        <li>
+          <symbol>Bee</symbol>
+        </li>
+      </prefixSymbols>
+    </symbolPack>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="OopsBug.OopsGeneExtension">
+        <headShader>
+          <shader>CutoutComplex</shader>
+          <colorA>
+            <!-- If multiple colors source are set they will be multiplied with one another. -->
+            <skinColor>true</skinColor>
+            <color>255, 245, 245</color> <!-- Compensating for the fact that I desaturated the textures for the eye color test. -->
+          </colorA>
+          <colorB>
+            <!-- <color>(1,1,1,1)</color> --> <!-- Use this is you just want to use the base color. Or make the area black in the mask. -->
+            <colourRange>
+              <li>255,64,64</li>
+              <li>128,255,128</li>
+              <li>128,128,255</li>
+              <li>255,64,64</li>
+            </colourRange>
+          </colorB>
+        </headShader>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>BP_Motheyes</defName>
+    <label>Moth Head</label>
+    <iconPath>UI/Icons/Genes/BP_Motheyes</iconPath>
+    <ignoreDarkness>true</ignoreDarkness>
+    <description>Carriers of this gene have two large eyes, that can almost see things before they happen. They can see fairly well in the dark.</description>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatMet>-2</biostatMet>
+    <biostatCpx>1</biostatCpx>
+        <symbolPack>
+      <prefixSymbols>
+        <li><symbol>dark</symbol></li>
+        <li><symbol>night</symbol></li>
+        <li><symbol>dim</symbol></li>
+        <li><symbol>Lamp</symbol></li>
+        <li><symbol>Moon</symbol></li>
+        <li><symbol>Luna</symbol></li>
+        <li><symbol>umbra</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>Moth</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+    <selectionWeight>0</selectionWeight>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Mothhead_Average1</li>
+      <li>Mothhead_Narrow1</li>
+      <li>Mothhead_Gaunt</li>
+      <li>Mothhead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MothEyes</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>79</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>BP_Spidereyes</defName>
+    <label>spider head</label>
+    <iconPath>UI/Icons/Genes/BP_Spidereyes</iconPath>
+    <description>Carriers of this gene have several eyes that help the carrier see better.</description>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>1</biostatCpx>
+    <selectionWeight>0</selectionWeight>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.2</offset>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Spiderhead_Average1</li>
+      <li>Spiderhead_Narrow1</li>
+      <li>Spiderhead_Gaunt</li>
+      <li>Spiderhead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/SpiderEyes</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>79</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <!--this spot will hold the other heads, might get a lil complicated here-->
+
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>Insectiod_Mantideyes</defName>
+    <label>mantid features</label>
+    <description>Carriers of this gene have four large and powerful alien mantid eyes along with a mantid face.</description>
+    <iconPath>Genes/Icons/BugParts_MantidEyesIcon</iconPath>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <postFactor>1.2</postFactor>
+      </li>
+    </capMods>
+    <forcedHeadTypes>
+      <li>Mantidhead_Average1</li>
+      <li>Mantidhead_Average2</li>
+      <li>Mantidhead_Narrow1</li>
+      <li>Mantidhead_Narrow2</li>
+      <li>Mantidhead_HeavyJaw</li>
+      <li>Mantidhead_Gaunt</li>
+    </forcedHeadTypes>
+      
+    <renderNodeProperties Inherit="False">
+      <li>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyes</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+          </defaultData>
+        </drawData>
+      </li>
+      <li>
+        <useSkinShader>true</useSkinShader>
+        <colorType>Skin</colorType>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/BugEyes/MantidEyesUpper</texPath>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>79</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <!-- Mantis heads -->
+   <!-- I think this is leftovers from a failed attempt? It and the above were both linking to missing -->
+  <GeneDef ParentName="BP_GeneHeadBase">
+    <defName>BP_MantisHead</defName>
+    <label>Mantis Head</label>
+    <description>Carriers of this gene have large, powerful, compound eyes paired with a mantis head.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <iconPath>Genes/Icons/BugParts_MantisEyesIcon</iconPath>
+    <missingGeneRomanceChanceFactor>0.4</missingGeneRomanceChanceFactor>
+    <forcedHeadTypes>
+      <li>BP_Mantishead_Average1</li>
+      <li>BP_Mantishead_Average2</li>
+      <li>BP_Mantishead_Narrow1</li>
+      <li>BP_Mantishead_Narrow2</li>
+      <li>BP_Mantishead_Gaunt</li>
+      <li>BP_Mantishead_HeavyJaw</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>NoBeard</li>
+      </tags>
+    </beardTagFilter>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>Blood</symbol>
+        </li>
+        <li>
+          <symbol>Mantis</symbol>
+        </li>
+        <li>
+          <symbol>Bug</symbol>
+        </li>
+        <li>
+          <symbol>Mandible</symbol>
+        </li>
+      </prefixSymbols>
+    </symbolPack>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>1.2</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension" MayRequire="RedMattis.BetterPrerequisites">
+        <disableFacialAnimations>true</disableFacialAnimations>
+      </li>
+      <li Class="OopsBug.OopsGeneExtension">
+        <headShader>
+          <shader>CutoutComplex</shader>
+          <colorA>
+            <skinColor>true</skinColor>
+            <color>255, 245, 245</color>
+          </colorA>
+          <colorB>
+            <colourRange>
+              <li>255,64,64</li>
+              <li>128,255,128</li>
+              <li>128,128,255</li>
+              <li>255,64,64</li>
+            </colourRange>
+          </colorB>
+        </headShader>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

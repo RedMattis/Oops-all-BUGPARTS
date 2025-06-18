@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BodyPartDef>
+		<defName>BP_Pedipalp</defName>
+		<label>Pedipalp</label>
+		<hitPoints>12</hitPoints>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+		<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+		<skinCovered>false</skinCovered>
+		<bleedRate>0.4</bleedRate>
+		<tags>
+			<li>ManipulationLimbDigit</li>
+		</tags>
+	</BodyPartDef>
+
+
+</Defs>
