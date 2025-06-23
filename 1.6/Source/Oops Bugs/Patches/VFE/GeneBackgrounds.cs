@@ -26,6 +26,7 @@ namespace OopsBug.Patches
             }
         }
 
+        const string targetClass = "VEF.Genes.GeneExtension";
 
         public DefModExtension ext = null;
         public VFEGeneExtensionWrapper(DefModExtension existingInstance = null)
@@ -33,7 +34,7 @@ namespace OopsBug.Patches
             Type type = GetExtensionType();
             if (type == null)
             {
-                Log.Error("OopsBug: Could not find VanillaGenesExpanded.GeneExtension class.");
+                Log.Error($"OopsBug: Could not find vanilla expanded's {targetClass} class.");
                 return;
             }
             CacheData();
@@ -61,10 +62,10 @@ namespace OopsBug.Patches
         {
             if (VFEGeneExtType == null)
             {
-                VFEGeneExtType = AccessTools.TypeByName("VanillaGenesExpanded.GeneExtension");
+                VFEGeneExtType = AccessTools.TypeByName(targetClass);
                 if (VFEGeneExtType == null)
                 {
-                    Log.Error("OopsBug: Could not find VanillaGenesExpanded.GeneExtension class.");
+                    Log.WarningOnce($"OopsBug: Could not find vanilla expanded's {targetClass} class.", 1231238312);
                 }
             }
             return VFEGeneExtType;
