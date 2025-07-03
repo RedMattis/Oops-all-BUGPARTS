@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<Defs>
+  
+  <GeneDef>
+    <defName>Insectoid_body</defName>
+    <label>Insectoid body</label>
+    <labelShortAdj>Insectoid body</labelShortAdj>
+    <description>Carriers of this gene have a chitinous body. This is unsettling to all non-insects. Most carriers of this gene are vulnerable to the cold temperatures. doesn't alter the head significantly.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <displayCategory>Bug_HeadAttachment</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Exoskin</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <fur>Chitinous_Body</fur>
+    <exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>OopsBug.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+</Defs>

@@ -1,0 +1,56 @@
+<Defs>
+  
+  <XenotypeIconDef>
+    <defName>BP_Arachna</defName>
+    <texPath>UI/Icons/Xenotypes/BP_Arachna</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_Lunarian</defName>
+    <texPath>UI/Icons/Xenotypes/BP_Lunarian</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_Mantid</defName>
+    <texPath>UI/Icons/Xenotypes/BP_Mantid</texPath>
+  </XenotypeIconDef>
+
+  <XenotypeIconDef>
+    <defName>BP_XenoAlate</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoAgate</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoNymph</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoNymph</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoEmissary</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoEmissary</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoPredator</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoPredator</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoMutant</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoMutant</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoWarrior</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoWarrior</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoConsort</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoConsort</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoWorker</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoWorker</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoQueen</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoQueen</texPath>
+  </XenotypeIconDef>
+  <XenotypeIconDef>
+    <defName>BP_XenoPrincess</defName>
+    <texPath>UI/Icons/Xenotypes/BP_XenoPrincess</texPath>
+  </XenotypeIconDef>
+</Defs>

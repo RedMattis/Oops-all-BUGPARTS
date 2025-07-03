@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Hands -->
+
+  <GeneDef Name="BP_GeneHandsBase" Abstract="True">
+    <endogeneCategory>Hands</endogeneCategory>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>100</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Hands</li>
+    </exclusionTags>
+  </GeneDef>
+
+ <GeneDef ParentName="BP_GeneHandsBase">
+    <defName>Mutiplelimbs</defName>
+    <label>multiple limbs</label>
+    <description>The carrier of this gene have multiple arms to help with tasks.</description>
+    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath>
+    <displayOrderInCategory>320</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <postFactor>1.1</postFactor>
+      </li>
+    </capMods>
+  </GeneDef>
+  
+</Defs>

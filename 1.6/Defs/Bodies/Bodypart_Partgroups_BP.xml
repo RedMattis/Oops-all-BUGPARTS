@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <BodyPartGroupDef>
+    <defName>Pedipalp</defName>
+    <label>pedipalp</label>
+    <listOrder>79</listOrder>
+  </BodyPartGroupDef>
+  
+    <BodyPartGroupDef>
+    <defName>Leftpedipalp</defName>
+    <label>left pedipalp</label>
+	<labelShort>pedipalp</labelShort>
+    <listOrder>79</listOrder>
+  </BodyPartGroupDef>
+  
+
+  
+  <BodyPartGroupDef>
+    <defName>Rightpedipalp</defName>
+    <label>right pedipalp</label>
+	<labelShort>pedipalp</labelShort>
+    <listOrder>78</listOrder>
+  </BodyPartGroupDef>
+  
+    	<BodyPartGroupDef>
+		<defName>InsectFrontLegs</defName>
+		<label>front legs</label>
+		<listOrder>82</listOrder>
+	</BodyPartGroupDef>
+  
+    <BodyPartGroupDef>
+    <defName>Insect_Abdomen</defName>
+    <label>insect abdomen</label>
+    <listOrder>103</listOrder>
+  </BodyPartGroupDef>
+  
+  	<BodyPartGroupDef>
+		<defName>InsectHindLegs</defName>
+		<label>hind legs</label>
+		<listOrder>2</listOrder>
+	</BodyPartGroupDef>
+	
+	  	<BodyPartGroupDef>
+		<defName>InsectMiddleLegs</defName>
+		<label>middle legs</label>
+		<listOrder>2</listOrder>
+	</BodyPartGroupDef>
+		  	<BodyPartGroupDef>
+		<defName>InsectsecondMiddleLegs</defName>
+		<label>second middle legs</label>
+		<listOrder>2</listOrder>
+	</BodyPartGroupDef>
+  
+  <BodyPartDef>
+    <defName>PedipalpClaw</defName>
+    <label>pedipalp claw</label>
+    <hitPoints>8</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbDigit</li>
+    </tags>
+  </BodyPartDef>
+  
+  
+</Defs>
