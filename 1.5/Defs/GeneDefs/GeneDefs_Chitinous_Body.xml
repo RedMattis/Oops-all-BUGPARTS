@@ -94,7 +94,7 @@
     </renderNodeProperties>
   </GeneDef>
 
-  <GeneDef>
+    <GeneDef>
     <defName>Fluffbug_body</defName>
     <label>Fluffy Insectoid body</label>
     <labelShortAdj>Fluffybug body</labelShortAdj>
@@ -123,5 +123,4 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
-
 </Defs>

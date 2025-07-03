@@ -164,6 +164,70 @@
     </renderNodeProperties>
   </GeneDef>
   <GeneDef ParentName="GeneTailBase">
+    <defName>BugParts_Abdomen_QBeebut</defName>
+    <label>Queen Bee Abdomen</label>
+    <displayCategory>Bug_BodyAttachment</displayCategory>
+    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow. This one is large and cumbersome, perfect for brood.</description>
+    <iconPath>Genes/Icons/Gene_beeab</iconPath>
+    <displayOrderInCategory>1001</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+    <selectionWeight>0</selectionWeight>
+        <statFactors>
+      <Fertility>2.0</Fertility>
+    </statFactors>
+    <statOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </statOffsets>
+    <renderNodeProperties Inherit="False">
+      <li Class="OopsBug.PawnComplexRenderingProps">
+        <parentTagDef>Body</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/BeeAbdomen/QBeetail</texPath>
+        <drawSize>(1.0,1.0)</drawSize>
+        <nodeClass>OopsBug.PawnRenderNode_Complex</nodeClass>
+
+        <!-- Custom Props! -->
+        <colorA>
+           <skinColor>true</skinColor>
+           <color>255, 245, 245</color>
+        
+          <!-- <colourRange>
+            <li>255,64,64</li>
+            <li>128,255,128</li>
+            <li>128,128,255</li>
+            <li>255,64,64</li>
+           </colourRange> -->
+        </colorA>
+        <colorB>
+          <hairColor>true</hairColor>
+          <!-- <colourRange>
+          <li>255,64,64</li>
+          <li>128,255,128</li>
+          <li>128,128,255</li>
+          <li>255,64,64</li>
+          </colourRange> -->
+        </colorB>
+        <isFurskin>false</isFurskin> <!--Default is already false. This is just here as an example.-->
+        <!-- End Custom Props -->
+
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <dataNorth>
+            <offset>(0.0, 0.2, -0.5)</offset>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0.0, -0.1, -0.0)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.7, -0.1, -0.2)</offset>
+          </dataEast>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneTailBase">
     <defName>BugParts_Abdomen_Mantis</defName>
     <label>Mantis Abdomen</label>
     <displayCategory>Bug_BodyAttachment</displayCategory>
@@ -257,71 +321,6 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
-
-  <GeneDef ParentName="GeneTailBase">
-    <defName>BugParts_Abdomen_QBeebut</defName>
-    <label>Queen Bee Abdomen</label>
-    <displayCategory>Bug_BodyAttachment</displayCategory>
-    <description>Carriers of this gene grow a new insectiod abdomen where their new organs grow. This one is large and cumbersome, perfect for brood.</description>
-    <iconPath>Genes/Icons/Gene_beeab</iconPath>
-    <displayOrderInCategory>1001</displayOrderInCategory>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>1</biostatMet>
-    <selectionWeight>0</selectionWeight>
-        <statFactors>
-      <Fertility>2.0</Fertility>
-    </statFactors>
-    <statOffsets>
-      <MoveSpeed>-0.2</MoveSpeed>
-    </statOffsets>
-    <renderNodeProperties Inherit="False">
-      <li Class="OopsBug.PawnComplexRenderingProps">
-        <parentTagDef>Body</parentTagDef>
-        <texPath>Things/Pawn/Humanlike/BodyAttachments/BeeAbdomen/QBeetail</texPath>
-        <drawSize>(1.0,1.0)</drawSize>
-        <nodeClass>OopsBug.PawnRenderNode_Complex</nodeClass>
-
-        <!-- Custom Props! -->
-        <colorA>
-           <skinColor>true</skinColor>
-           <color>255, 245, 245</color>
-        
-          <!-- <colourRange>
-            <li>255,64,64</li>
-            <li>128,255,128</li>
-            <li>128,128,255</li>
-            <li>255,64,64</li>
-           </colourRange> -->
-        </colorA>
-        <colorB>
-          <hairColor>true</hairColor>
-          <!-- <colourRange>
-          <li>255,64,64</li>
-          <li>128,255,128</li>
-          <li>128,128,255</li>
-          <li>255,64,64</li>
-          </colourRange> -->
-        </colorB>
-        <isFurskin>false</isFurskin> <!--Default is already false. This is just here as an example.-->
-        <!-- End Custom Props -->
-
-        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-        <drawData>
-          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-          <dataNorth>
-            <offset>(0.0, 0.2, -0.5)</offset>
-          </dataNorth>
-          <dataSouth>
-            <offset>(-0.0, -0.1, -0.0)</offset>
-          </dataSouth>
-          <dataEast>
-            <offset>(-0.7, -0.1, -0.2)</offset>
-          </dataEast>
-        </drawData>
-      </li>
-    </renderNodeProperties>
-  </GeneDef>
-
   <GeneDef ParentName="GeneTailBase">
     <defName>BugParts_honeypot</defName>
     <label>Insectoid honeypot</label>

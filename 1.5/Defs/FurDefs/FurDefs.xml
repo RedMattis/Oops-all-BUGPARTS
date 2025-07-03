@@ -15,7 +15,7 @@
     </bodyTypeGraphicPaths>
   </FurDef>
 
-  <FurDef>
+    <FurDef>
     <defName>Fluffybug_Body</defName>
     <noGraphic>true</noGraphic>
     <bodyTypeGraphicPaths>

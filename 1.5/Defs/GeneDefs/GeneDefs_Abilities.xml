@@ -309,11 +309,7 @@
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
-        <texPaths>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Bee_Wings/Bee_Wings</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Bee_Wings/Bee_Wings2</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Bee_Wings/Bee_Wings3</li>
-        </texPaths>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Bee_Wings/Bee_Wings</texPath>
         <drawSize>(1.0,1.0)</drawSize>
         <drawData>
           <defaultData>

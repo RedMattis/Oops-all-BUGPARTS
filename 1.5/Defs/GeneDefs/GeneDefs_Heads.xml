@@ -31,12 +31,12 @@
 				<li>NoBeard</li>
 			</tags>
 		</beardTagFilter>
-	<!--	<hairTagFilter>
+		<hairTagFilter>
 			<whitelist>true</whitelist>
 			<tags>
 				<li>Bald</li>
 			</tags>
-		</hairTagFilter>-->
+		</hairTagFilter>
 		<symbolPack>
 			<prefixSymbols>
 				<li>

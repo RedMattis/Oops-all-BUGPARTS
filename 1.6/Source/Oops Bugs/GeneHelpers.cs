@@ -1,4 +1,107 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Verse;
+
+namespace OopsBug
+{
+    public static partial class Helpers
+    {
+        public static List<Gene> GetActiveGeneByName(Pawn pawn, string geneName)
+        {
+            List<Gene> result = new List<Gene>();
+            var genes = pawn.genes.GenesListForReading;
+            for (int i = 0; i < genes.Count; i++)
+            {
+                if (genes[i].Active && genes[i].def.defName == geneName)
+                {
+                    result.Add(genes[i]);
+                }
+            }
+            return result;
+        }
+
+        public static List<Gene> GetGeneByName(Pawn pawn, string geneName)
+        {
+            List<Gene> result = new List<Gene>();
+            var genes = pawn.genes.GenesListForReading;
+            for (int i = 0; i < genes.Count; i++)
+            {
+                if (genes[i].def.defName == geneName)
+                {
+                    result.Add(genes[i]);
+                }
+            }
+            return result;
+        }
+
+        public static List<Gene> GetAllActiveGenes(Pawn pawn)
+        {
+            List<Gene> result = new List<Gene>();
+            var genes = pawn.genes.GenesListForReading;
+            for (int i = 0; i < genes.Count; i++)
+            {
+                if (genes[i].Active)
+                {
+                    result.Add(genes[i]);
+                }
+            }
+            return result;
+        }
+
+        public static List<Gene> GetAllInactiveGenes(Pawn pawn)
+        {
+            List<Gene> result = new List<Gene>();
+            var genes = pawn.genes.GenesListForReading;
+            for (int i = 0; i < genes.Count; i++)
+            {
+                if (!genes[i].Active)
+                {
+                    result.Add(genes[i]);
+                }
+            }
+            return result;
+        }
+
+        public static Hediff GetFirstHediffOfDefName(this HediffSet instance, string defName, bool mustBeVisible = false)
+        {
+            for (int i = 0; i < instance.hediffs.Count; i++)
+            {
+                if (instance.hediffs[i].def.defName == defName && (!mustBeVisible || instance.hediffs[i].Visible))
+                {
+                    return instance.hediffs[i];
+                }
+            }
+
+            return null;
+        }
+
+
+        public static List<OopsGeneExtension> GetOopsGeneExtensions(Pawn pawn)
+        {
+            var activeGenes = GetAllActiveGenes(pawn);
+            return GetGeneExtFromGenes(activeGenes.Select(x=>x.def));
+        }
+
+        public static List<OopsGeneExtension> GetGeneExtFromGenes(this IEnumerable<GeneDef> geneList)
+        {
+            List<OopsGeneExtension> result = new();
+            foreach (var gene in geneList)
+            {
+                var ext = gene.GetModExtension<OopsGeneExtension>();
+                if (ext != null)
+                {
+                    result.Add(ext);
+                }
+            }
+            return result;
+        }
+    }
+}
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

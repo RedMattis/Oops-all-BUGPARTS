@@ -147,8 +147,8 @@
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <randomChosen>true</randomChosen>
   </GeneDef>
-  
-  <GeneDef ParentName="BP_GeneAntennaBase">
+
+    <GeneDef ParentName="BP_GeneAntennaBase">
     <defName>Feather_Antennae</defName>
     <label>Feather antennae</label>
     <description>Carriers of this gene have two long, Feathered antennae. Quite cute!</description>
@@ -177,7 +177,7 @@
       </li>
     </renderNodeProperties>
   </GeneDef>
-
+  
   <GeneDef ParentName="BP_GeneeyesBase">
     <defName>Insectiod_Mantideyes</defName>
     <label>Mantid Features</label>
@@ -404,11 +404,7 @@
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
-        <texPaths>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
-        </texPaths>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <drawData>
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
@@ -437,11 +433,7 @@
     <renderNodeProperties Inherit="False">
       <li>
         <parentTagDef>Body</parentTagDef>
-        <texPaths>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
-        </texPaths>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <colorType>Hair</colorType>
         <drawData>
@@ -482,11 +474,7 @@
           <value>1.35</value>
         </hsvMultiplier>
         <parentTagDef>Body</parentTagDef>
-        <texPaths>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff2</li>
-        <li>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff3</li>
-        </texPaths>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/Fluff/Neckfluff</texPath>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <nodeClass>OopsBug.PawnRenderNode_HSVTweak</nodeClass>
         <colorType>Skin</colorType>
